@@ -396,9 +396,10 @@ def showGenres():
         return render_template('publicsongs.html', songs=songs,
                                genres=genres)
     else:
-        return render_template('songs.html', songs=songs,
-                               genres=genres,
-                               username=login_session.get('username'))
+        return redirect(url_for('showSongs', genre_id = 1))
+        # return render_template('songs.html', songs=songs,
+                               # genres=genres,
+                               # username=login_session.get('username'))
 
 
 # Create a new music genre
